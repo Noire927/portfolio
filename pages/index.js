@@ -2,7 +2,7 @@ import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Image from "next/legacy/image";
-import deved from "../public/dev-ed-wave.png";
+import avatar from "../public/avatar.jpg";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
@@ -25,17 +25,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
-        <section className="min-h-screen">
+        <section className="min-h-screen pb-5">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons">Made by Skyum Design</h1>
-            <ul className="flex items-center">
-              <li>
+            <h1 className="text-xl font-burtons dark:text-white">
+              Skyum Design
+            </h1>
+            <ul className="flex items-center dark:text-white">
+              <li className="transition hover:-translate-y-1 hover:scale-110">
                 <BsFillMoonStarsFill
                   onClick={() => setDarkmode(!darkMode)}
                   className="cursor-pointer text-2xl"
                 />
               </li>
-              <li>
+              <li className="transition hover:-translate-y-1 hover:scale-110">
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
                   href="#"
@@ -49,96 +51,118 @@ export default function Home() {
             <h2 className="text-5xl pt-2 text-teal-600 font-medium md:text-6xl">
               Skyum
             </h2>
-            <h3 className="text-2xl py-2 md:text-3xl">Developer & Designer</h3>
-            <p className="text.md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto">
+            <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
+              Developer & Designer
+            </h3>
+            <p className="text.md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
               Introduction, This is where I say something nice about myself
             </p>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
-            <a href="https://github.com/Noire927">
+          <div className="text-5xl flex justify-center gap-4 py-3  text-gray-600 dark:text-white ">
+            <a
+              className="transition hover:-translate-y-1 hover:scale-110"
+              href="https://github.com/Noire927"
+            >
               <AiFillGithub />
             </a>
-            <a href="https://www.linkedin.com/in/skyum">
+            <a
+              className="transition hover:-translate-y-1 hover:scale-110"
+              href="https://www.linkedin.com/in/skyum"
+            >
               <AiFillLinkedin />
             </a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image src={deved} fill="fill" objectFit="cover" />
+          <div className="relative  mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+            <Image src={avatar} fill="fill" objectFit="cover" />
           </div>
         </section>
-        <section>
+        <section className="pb-10">
           <div>
-            <h3 className="text-3xl py-1">Services I offer</h3>
-            <p className="text-md py-2 leading-8 text-gray-800">
+            <h3 className="text-3xl py-1 dark:text-white">Services I offer</h3>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
               Sinsce the beginning of my journey as a freelance designer and
               developer, I've done remove work for
-              <span className="text-teal-500">agencies</span>, consulted for
-              <span className="text-teal-500">startups</span>, and collaborated
+              <span className="text-teal-500"> agencies</span>, consulted for
+              <span className="text-teal-500"> startups</span>, and collaborated
               with talented people to create digital products for both business
               and private.
             </p>
-            <p className="text-md py-2 leading-8 text-gray-800">
+            <p className="text-md pb-10 leading-8 text-gray-800 dark:text-white">
               I offer from a wise range of services, including brand design,
               programming and teaching
             </p>
           </div>
           <div className="lg:flex gap-10 justify-center">
-            <div className="text-center shadow-lg p-10 round-xl my-10">
+            <div className="text-center shadow-lg p-10 round-xl my-10 dark:shadow-black  ">
               <Image
                 className="mx-auto"
                 src={design}
                 width={100}
                 height={100}
               />
-              <h3 className="text-lg font-medium pt-8 pb-2">
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
                 Beautiful Designs
               </h3>
-              <p className="py-2">Something something text about designs</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-grey-800 py-1">Figma</p>
-              <p className="text-grey-800 py-1">Photoshop</p>
+              <p className="py-2 dark:text-white">
+                Something something about my design process
+              </p>
+              <h4 className="py-4 text-teal-600">
+                The tool I use for my designs
+              </h4>
+              <p className="text-grey-800 py-1 dark:text-white">Figma</p>
+              <p className="text-grey-800 py-1 dark:text-white">Photoshop</p>
             </div>
-            <div className="text-center shadow-lg p-10 round-xl my-10">
+            <div className="text-center shadow-lg p-10 round-xl my-10 dark:shadow-black">
               <Image className="mx-auto" src={code} width={100} height={100} />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
+                Clean Code
               </h3>
-              <p className="py-2">Something something text about designs</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-grey-800 py-1">Figma</p>
-              <p className="text-grey-800 py-1">Photoshop</p>
+              <p className="py-2 dark:text-white">
+                Something something about why clean code important
+              </p>
+              <h4 className="py-4 text-teal-600">
+                Languages and frameworks I have know
+              </h4>
+              <p className="text-grey-800 py-1 dark:text-white">Javascript</p>
+              <p className="text-grey-800 py-1 dark:text-white">React</p>
             </div>
-            <div className="text-center shadow-lg p-10 round-xl my-10">
+            <div className="text-center shadow-lg p-10 round-xl my-10 dark:shadow-black">
               <Image
                 className="mx-auto"
                 src={consulting}
                 width={100}
                 height={100}
               />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
+              <h3 className="text-lg font-medium pt-8 pb-2 dark:text-white">
+                UX Consulting
               </h3>
-              <p className="py-2">Something something text about designs</p>
-              <h4 className="py-4 text-teal-600">Design tools I use</h4>
-              <p className="text-grey-800 py-1">Figma</p>
-              <p className="text-grey-800 py-1">Photoshop</p>
+              <p className="py-2 dark:text-white">
+                Something something about having the user be in the focus
+              </p>
+              <h4 className="py-4 text-teal-600">User research</h4>
+              <p className="text-grey-800 py-1 dark:text-white">
+                Survey results
+              </p>
+              <p className="text-grey-800 py-1 dark:text-white">
+                Field research
+              </p>
             </div>
           </div>
         </section>
         <section>
           <div>
-            <h3 className="text-3xl py-1">Portfolio</h3>
-            <p className="text-md py-2 leading-8 text-gray-800">
+            <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
+            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
               Sinsce the beginning of my journey as a freelance designer and
               developer, I've done remove work for
-              <span className="text-teal-500">agencies</span>, consulted for
-              <span className="text-teal-500">startups</span>, and collaborated
+              <span className="text-teal-500"> agencies</span>, consulted for
+              <span className="text-teal-500"> startups</span>, and collaborated
               with talented people to create digital products for both business
               and private.
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row flex-wrap">
-            <div className="basic-1/3 flex-1">
+            <div className="basic-1/3 flex-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
               <Image
                 src={web1}
                 className="rounded-lg object-cover"
@@ -147,7 +171,7 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basic-1/3 flex-1">
+            <div className="basic-1/3 flex-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
               <Image
                 src={web2}
                 className="rounded-lg object-cover"
@@ -156,7 +180,7 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basic-1/3 flex-1">
+            <div className="basic-1/3 flex-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
               <Image
                 src={web3}
                 className="rounded-lg object-cover"
@@ -165,7 +189,7 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basic-1/3 flex-1">
+            <div className="basic-1/3 flex-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
               <Image
                 src={web4}
                 className="rounded-lg object-cover"
@@ -174,7 +198,7 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basic-1/3 flex-1">
+            <div className="basic-1/3 flex-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
               <Image
                 src={web5}
                 className="rounded-lg object-cover"
@@ -183,7 +207,7 @@ export default function Home() {
                 layout="responsive"
               />
             </div>
-            <div className="basic-1/3 flex-1">
+            <div className="basic-1/3 flex-1 transition ease-in-out hover:-translate-y-1 hover:scale-110 duration-300">
               <Image
                 src={web6}
                 className="rounded-lg object-cover"
