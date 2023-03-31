@@ -72,7 +72,7 @@ export default function Home() {
               <AiFillLinkedin />
             </a>
           </div>
-          <div className="relative  mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+          <div className="relative  mx-auto bg-gradient-to-b hover:animate-waving-hand from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
             <Image src={avatar} fill="fill" objectFit="cover" />
           </div>
         </section>

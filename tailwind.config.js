@@ -13,6 +13,16 @@ module.exports = {
     extend: {
       fontFamily: { burtons: "burtons" },
     },
+    keyframes: {
+      rotate: {
+        "0%": { transform: "rotate(0.0deg)" },
+        "100%": { transform: "rotate(360deg)" },
+      },
+    },
+    animation: {
+      "waving-hand": "rotate 2s linear",
+    },
   },
+
   plugins: [],
 };
